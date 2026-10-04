@@ -1,0 +1,660 @@
+{
+ "packs": [
+  {
+   "id": "macos-light",
+   "name": "macOS Big Sur",
+   "desc": "Le look Mac complet : WhiteSur, icônes et curseurs macOS, barre en haut et dock.",
+   "palette": "macos-light",
+   "gtk": {
+    "catalog": "whitesur-gtk",
+    "file": "WhiteSur-Light.tar.xz",
+    "theme": "WhiteSur-Light"
+   },
+   "icons": {
+    "catalog": "whitesur-icons",
+    "file": "01-WhiteSur.tar.xz",
+    "theme": "WhiteSur",
+    "system": [
+     "Papirus-Light"
+    ]
+   },
+   "cursors": {
+    "catalog": "macos-cursors",
+    "file": "macOS.tar.xz",
+    "theme": "macOS",
+    "system": [
+     "Bibata-Modern-Ice"
+    ]
+   },
+   "panel": "macos",
+   "plank": {
+    "catalog": "best-plank",
+    "file": "MacOS-BigSur-Light.zip",
+    "theme": "MacOS-BigSur-Light"
+   },
+   "wallpaper": {
+    "palette": "macos-light",
+    "style": "blobs"
+   },
+   "button_layout": "macos",
+   "dark_panel": false,
+   "online": true
+  },
+  {
+   "id": "macos-dark",
+   "name": "macOS Sombre",
+   "desc": "WhiteSur sombre, icônes macOS sombres, dock Big Sur.",
+   "palette": "macos-dark",
+   "gtk": {
+    "catalog": "whitesur-gtk",
+    "file": "WhiteSur-Dark.tar.xz",
+    "theme": "WhiteSur-Dark"
+   },
+   "icons": {
+    "catalog": "whitesur-icons",
+    "file": "01-WhiteSur.tar.xz",
+    "theme": "WhiteSur-dark",
+    "system": [
+     "Papirus-Dark"
+    ]
+   },
+   "cursors": {
+    "catalog": "macos-cursors",
+    "file": "macOS.tar.xz",
+    "theme": "macOS",
+    "system": [
+     "Bibata-Modern-Classic"
+    ]
+   },
+   "panel": "macos",
+   "plank": {
+    "catalog": "best-plank",
+    "file": "MacOS-BigSur-Dark.zip",
+    "theme": "MacOS-BigSur-Dark"
+   },
+   "wallpaper": {
+    "palette": "macos-dark",
+    "style": "blobs"
+   },
+   "button_layout": "macos",
+   "dark_panel": true,
+   "online": true
+  },
+  {
+   "id": "windows11",
+   "name": "Windows 11",
+   "desc": "Fluent Design : thème, icônes et curseurs Fluent, grande barre en bas.",
+   "palette": "win11-light",
+   "gtk": {
+    "catalog": "fluent-gtk",
+    "file": "Fluent.tar.xz",
+    "theme": "Fluent-Light"
+   },
+   "icons": {
+    "catalog": "fluent-icons",
+    "file": "01-Fluent.tar.xz",
+    "theme": "Fluent",
+    "system": [
+     "Papirus-Light"
+    ]
+   },
+   "cursors": {
+    "catalog": "fluent-cursors",
+    "file": "Fluent.tar.xz",
+    "theme": "Fluent-cursors",
+    "system": [
+     "Bibata-Modern-Classic"
+    ]
+   },
+   "panel": "windows",
+   "wallpaper": {
+    "palette": "win11-light",
+    "style": "waves"
+   },
+   "button_layout": "windows",
+   "dark_panel": false,
+   "online": true
+  },
+  {
+   "id": "windows11-dark",
+   "name": "Windows 11 Sombre",
+   "desc": "Fluent en mode sombre.",
+   "palette": "win11-dark",
+   "gtk": {
+    "catalog": "fluent-gtk",
+    "file": "Fluent.tar.xz",
+    "theme": "Fluent-Dark"
+   },
+   "icons": {
+    "catalog": "fluent-icons",
+    "file": "01-Fluent.tar.xz",
+    "theme": "Fluent-dark",
+    "system": [
+     "Papirus-Dark"
+    ]
+   },
+   "cursors": {
+    "catalog": "fluent-cursors",
+    "file": "Fluent.tar.xz",
+    "theme": "Fluent-dark-cursors",
+    "system": [
+     "Bibata-Modern-Classic"
+    ]
+   },
+   "panel": "windows",
+   "wallpaper": {
+    "palette": "win11-dark",
+    "style": "waves"
+   },
+   "button_layout": "windows",
+   "dark_panel": true,
+   "online": true
+  },
+  {
+   "id": "nord",
+   "name": "Nord Arctique",
+   "desc": "Nordic + icônes Papirus + curseurs Nordzy, ambiance polaire.",
+   "palette": "nord",
+   "gtk": {
+    "catalog": "nordic-gtk",
+    "file": "Nordic-darker.tar.xz",
+    "theme": "Nordic-darker"
+   },
+   "icons": {
+    "system": [
+     "Papirus-Dark"
+    ]
+   },
+   "cursors": {
+    "catalog": "nordzy-cursors",
+    "file": "Nordzy-cursors.tar.gz",
+    "theme": "Nordzy-cursors",
+    "system": [
+     "Bibata-Modern-Classic"
+    ]
+   },
+   "panel": "gnome",
+   "plank": "generated",
+   "wallpaper": {
+    "palette": "nord",
+    "style": "mountains"
+   },
+   "button_layout": "windows",
+   "dark_panel": true,
+   "online": true
+  },
+  {
+   "id": "dracula",
+   "name": "Dracula",
+   "desc": "Le thème sombre culte, violet et rose.",
+   "palette": "dracula",
+   "gtk": {
+    "catalog": "dracula-gtk",
+    "file": "Dracula.tar.xz",
+    "theme": "Dracula"
+   },
+   "icons": {
+    "system": [
+     "Papirus-Dark"
+    ]
+   },
+   "cursors": {
+    "catalog": "catppuccin-cursors",
+    "file": "catppuccin-mocha-mauve-cursors.zip",
+    "theme": "catppuccin-mocha-mauve-cursors",
+    "system": [
+     "Bibata-Modern-Classic"
+    ]
+   },
+   "panel": "chromeos",
+   "wallpaper": {
+    "palette": "dracula",
+    "style": "stars"
+   },
+   "button_layout": "windows",
+   "dark_panel": true,
+   "online": true
+  },
+  {
+   "id": "catppuccin",
+   "name": "Catppuccin Mocha",
+   "desc": "Pastel sombre doux, très tendance.",
+   "palette": "catppuccin-mocha",
+   "gtk": {
+    "catalog": "catppuccin-gtk",
+    "file": "Catppuccin-B-MB-dark.tar.xz",
+    "theme": "Catppuccin-B-MB-Dark"
+   },
+   "icons": {
+    "system": [
+     "Papirus-Dark"
+    ]
+   },
+   "cursors": {
+    "catalog": "catppuccin-cursors",
+    "file": "catppuccin-mocha-mauve-cursors.zip",
+    "theme": "catppuccin-mocha-mauve-cursors",
+    "system": [
+     "Bibata-Modern-Classic"
+    ]
+   },
+   "panel": "minimal",
+   "wallpaper": {
+    "palette": "catppuccin-mocha",
+    "style": "blobs"
+   },
+   "button_layout": "macos",
+   "dark_panel": true,
+   "online": true
+  },
+  {
+   "id": "gruvbox",
+   "name": "Gruvbox Rétro",
+   "desc": "Tons chauds rétro, icônes Gruvbox Plus.",
+   "palette": "gruvbox",
+   "gtk": {
+    "catalog": "gruvbox-gtk",
+    "file": "Gruvbox-B-MB-dark.tar.xz",
+    "theme": "Gruvbox-B-MB-Dark"
+   },
+   "icons": {
+    "catalog": "gruvbox-icons",
+    "file": "gruvbox-plus-icon-pack.6.6.0.tar.gz",
+    "theme": "Gruvbox-Plus-Dark",
+    "system": [
+     "Papirus-Dark"
+    ]
+   },
+   "cursors": {
+    "system": [
+     "Bibata-Modern-Classic",
+     "DMZ-Black"
+    ]
+   },
+   "panel": "windows",
+   "wallpaper": {
+    "palette": "gruvbox",
+    "style": "mountains"
+   },
+   "button_layout": "windows",
+   "dark_panel": true,
+   "online": true
+  },
+  {
+   "id": "tokyo",
+   "name": "Tokyo Night",
+   "desc": "Néons bleus d'une nuit à Tokyo.",
+   "palette": "tokyo-night",
+   "gtk": {
+    "catalog": "tokyonight-gtk",
+    "file": "Tokyonight-B-MB-dark.tar.xz",
+    "theme": "Tokyonight-B-MB-Dark"
+   },
+   "icons": {
+    "catalog": "tela-circle-icons",
+    "file": "01-Tela-circle.tar.xz",
+    "theme": "Tela-circle-dark",
+    "system": [
+     "Papirus-Dark"
+    ]
+   },
+   "cursors": {
+    "system": [
+     "Bibata-Modern-Classic"
+    ]
+   },
+   "panel": "gnome",
+   "wallpaper": {
+    "palette": "tokyo-night",
+    "style": "aurora"
+   },
+   "button_layout": "macos",
+   "dark_panel": true,
+   "online": true
+  },
+  {
+   "id": "sweet",
+   "name": "Sweet Neon",
+   "desc": "Dégradés néon : Sweet + icônes Candy + curseurs Sweet.",
+   "palette": "cyberpunk",
+   "gtk": {
+    "catalog": "sweet-gtk",
+    "file": "Sweet-Dark.tar.xz",
+    "theme": "Sweet-Dark"
+   },
+   "icons": {
+    "catalog": "candy-icons",
+    "file": "candy-icons.tar.xz",
+    "theme": "candy-icons",
+    "system": [
+     "Papirus-Dark"
+    ]
+   },
+   "cursors": {
+    "catalog": "sweet-cursors",
+    "file": "Sweet-cursors.tar.xz",
+    "theme": "Sweet-cursors",
+    "system": [
+     "Bibata-Modern-Classic"
+    ]
+   },
+   "panel": "chromeos",
+   "wallpaper": {
+    "palette": "synthwave",
+    "style": "lowpoly"
+   },
+   "button_layout": "macos",
+   "dark_panel": true,
+   "online": true
+  },
+  {
+   "id": "material",
+   "name": "Material Orchis",
+   "desc": "Orchis + Tela : moderne, propre et coloré.",
+   "palette": "win11-light",
+   "gtk": {
+    "catalog": "orchis-gtk",
+    "file": "Orchis.tar.xz",
+    "theme": "Orchis-Light"
+   },
+   "icons": {
+    "catalog": "tela-icons",
+    "file": "01-Tela.tar.xz",
+    "theme": "Tela",
+    "system": [
+     "Papirus"
+    ]
+   },
+   "cursors": {
+    "system": [
+     "Bibata-Modern-Ice"
+    ]
+   },
+   "panel": "chromeos",
+   "wallpaper": {
+    "palette": "ocean",
+    "style": "waves"
+   },
+   "button_layout": "windows",
+   "dark_panel": false,
+   "online": true
+  },
+  {
+   "id": "gen-nord",
+   "name": "Nord (hors-ligne)",
+   "desc": "Thème Nord généré par BESTthemes + fond montagnes.",
+   "palette": "nord",
+   "gtk": {
+    "generate": "nord",
+    "style": "macos"
+   },
+   "icons": {
+    "system": [
+     "Papirus-Dark"
+    ]
+   },
+   "cursors": {
+    "system": [
+     "Bibata-Modern-Classic",
+     "DMZ-White"
+    ]
+   },
+   "panel": "macos",
+   "plank": "generated",
+   "wallpaper": {
+    "palette": "nord",
+    "style": "mountains"
+   },
+   "button_layout": "macos",
+   "dark_panel": true
+  },
+  {
+   "id": "gen-catppuccin",
+   "name": "Catppuccin Latte",
+   "desc": "Pastel clair généré, doux pour les yeux.",
+   "palette": "catppuccin-latte",
+   "gtk": {
+    "generate": "catppuccin-latte",
+    "style": "circles"
+   },
+   "icons": {
+    "system": [
+     "Papirus-Light"
+    ]
+   },
+   "cursors": {
+    "system": [
+     "Bibata-Modern-Ice"
+    ]
+   },
+   "panel": "minimal",
+   "plank": "generated",
+   "wallpaper": {
+    "palette": "catppuccin-latte",
+    "style": "blobs"
+   },
+   "button_layout": "macos",
+   "dark_panel": false
+  },
+  {
+   "id": "gen-cyberpunk",
+   "name": "Cyberpunk 2077",
+   "desc": "Rose néon et cyan sur fond violet nuit.",
+   "palette": "cyberpunk",
+   "gtk": {
+    "generate": "cyberpunk",
+    "style": "windows"
+   },
+   "icons": {
+    "system": [
+     "Papirus-Dark"
+    ]
+   },
+   "cursors": {
+    "system": [
+     "Bibata-Modern-Classic"
+    ]
+   },
+   "panel": "windows",
+   "wallpaper": {
+    "palette": "cyberpunk",
+    "style": "lowpoly"
+   },
+   "button_layout": "windows",
+   "dark_panel": true
+  },
+  {
+   "id": "gen-synthwave",
+   "name": "Synthwave '84",
+   "desc": "Rétro-futuriste années 80, coucher de soleil néon.",
+   "palette": "synthwave",
+   "gtk": {
+    "generate": "synthwave",
+    "style": "circles"
+   },
+   "icons": {
+    "system": [
+     "Papirus-Dark"
+    ]
+   },
+   "cursors": {
+    "system": [
+     "Bibata-Modern-Classic"
+    ]
+   },
+   "panel": "macos",
+   "plank": "generated",
+   "wallpaper": {
+    "palette": "synthwave",
+    "style": "mountains"
+   },
+   "button_layout": "macos",
+   "dark_panel": true
+  },
+  {
+   "id": "gen-forest",
+   "name": "Forêt",
+   "desc": "Verts profonds et apaisants.",
+   "palette": "everforest",
+   "gtk": {
+    "generate": "everforest",
+    "style": "minimal"
+   },
+   "icons": {
+    "system": [
+     "Papirus-Dark"
+    ]
+   },
+   "cursors": {
+    "system": [
+     "Bibata-Modern-Classic"
+    ]
+   },
+   "panel": "chromeos",
+   "wallpaper": {
+    "palette": "forest",
+    "style": "mountains"
+   },
+   "button_layout": "windows",
+   "dark_panel": true
+  },
+  {
+   "id": "gen-mint",
+   "name": "Mint Fresh",
+   "desc": "Linux Mint revisité, clair et vert menthe.",
+   "palette": "mint",
+   "gtk": {
+    "generate": "mint",
+    "style": "windows"
+   },
+   "icons": {
+    "system": [
+     "Mint-Y-Aqua",
+     "Papirus"
+    ]
+   },
+   "cursors": {
+    "system": [
+     "Bibata-Modern-Ice"
+    ]
+   },
+   "panel": "mint",
+   "wallpaper": {
+    "palette": "mint",
+    "style": "lowpoly"
+   },
+   "button_layout": "windows",
+   "dark_panel": false
+  },
+  {
+   "id": "gen-minimal",
+   "name": "Minimal Noir",
+   "desc": "Noir et gris, rien qui distrait.",
+   "palette": "monochrome-dark",
+   "gtk": {
+    "generate": "monochrome-dark",
+    "style": "minimal"
+   },
+   "icons": {
+    "system": [
+     "Papirus-Dark"
+    ]
+   },
+   "cursors": {
+    "system": [
+     "Bibata-Modern-Classic"
+    ]
+   },
+   "panel": "focus",
+   "wallpaper": {
+    "palette": "monochrome-dark",
+    "style": "gradient"
+   },
+   "button_layout": "minimal",
+   "dark_panel": true
+  },
+  {
+   "id": "gen-gaming",
+   "name": "Gaming RGB",
+   "desc": "Vert néon, anneaux RGB, coins vifs.",
+   "palette": "gaming",
+   "gtk": {
+    "generate": "gaming",
+    "style": "windows"
+   },
+   "icons": {
+    "system": [
+     "Papirus-Dark"
+    ]
+   },
+   "cursors": {
+    "system": [
+     "Bibata-Modern-Classic"
+    ]
+   },
+   "panel": "windows",
+   "wallpaper": {
+    "palette": "gaming",
+    "style": "rings"
+   },
+   "button_layout": "windows",
+   "dark_panel": true
+  },
+  {
+   "id": "gen-sakura",
+   "name": "Sakura",
+   "desc": "Rose cerisier tout en douceur.",
+   "palette": "sakura",
+   "gtk": {
+    "generate": "sakura",
+    "style": "macos"
+   },
+   "icons": {
+    "system": [
+     "Papirus-Light"
+    ]
+   },
+   "cursors": {
+    "system": [
+     "Bibata-Modern-Ice"
+    ]
+   },
+   "panel": "macos",
+   "plank": "generated",
+   "wallpaper": {
+    "palette": "sakura",
+    "style": "blobs"
+   },
+   "button_layout": "macos",
+   "dark_panel": false
+  },
+  {
+   "id": "gen-ocean",
+   "name": "Océan",
+   "desc": "Bleus profonds et vagues.",
+   "palette": "ocean",
+   "gtk": {
+    "generate": "ocean",
+    "style": "circles"
+   },
+   "icons": {
+    "system": [
+     "Papirus-Dark"
+    ]
+   },
+   "cursors": {
+    "system": [
+     "Bibata-Modern-Classic"
+    ]
+   },
+   "panel": "gnome",
+   "plank": "generated",
+   "wallpaper": {
+    "palette": "ocean",
+    "style": "waves"
+   },
+   "button_layout": "macos",
+   "dark_panel": true
+  }
+ ]
+}

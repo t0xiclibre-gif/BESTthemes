@@ -1,0 +1,61 @@
+name: BESTthemes Windows
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Dependencies
+        run: python -m pip install -r windows/requirements.txt pyinstaller
+
+      - name: Tests (on the runner's real registry)
+        run: python -m unittest discover -s windows/tests -t windows -v
+
+      - name: Executable
+        run: python -m PyInstaller windows/packaging/bestthemes_win.spec --noconfirm --distpath dist --workpath build
+
+      - name: Startup self-test
+        run: |
+          $p = Start-Process dist/BESTthemes/BESTthemes.exe -ArgumentList "--selftest" -PassThru -Wait
+          if ($p.ExitCode -ne 0) { exit 1 }
+
+      - name: Installer
+        run: |
+          choco install innosetup --no-progress -y
+          iscc windows/packaging/installer.iss
+
+      - name: Portable version (single .exe)
+        run: python -m PyInstaller windows/packaging/bestthemes_win_portable.spec --noconfirm --distpath dist --workpath build/portable
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: BESTthemes-Setup
+          path: dist/BESTthemes-Setup-*.exe
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: BESTthemes-Portable
+          path: dist/BESTthemes-Portable-*.exe
+
+      - name: Attach to the release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            dist/BESTthemes-Setup-*.exe
+            dist/BESTthemes-Portable-*.exe

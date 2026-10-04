@@ -1,0 +1,408 @@
+{
+ "packs": [
+  {
+   "id": "macos-light",
+   "name": "macOS Big Sur",
+   "desc": "Clair, accent bleu, curseurs et icônes du Mac, barre épurée qui se cache.",
+   "palette": "macos-light",
+   "dark": false,
+   "titlebars": false,
+   "transparency": true,
+   "wallpaper": {
+    "style": "blobs"
+   },
+   "cursor": {
+    "item": "macos-win",
+    "file": "macOS-Windows.zip",
+    "prefer": "macOS-Regular"
+   },
+   "icons": {
+    "item": "linux-whitesur-icons",
+    "file": "01-WhiteSur.tar.xz",
+    "prefer": "WhiteSur"
+   },
+   "taskbar": "macos",
+   "effects": "fluid",
+   "tools": [
+    "WinStep.Nexus",
+    "CharlesMilette.TranslucentTB"
+   ]
+  },
+  {
+   "id": "macos-dark",
+   "name": "macOS Sombre",
+   "desc": "Le Mac en mode sombre, icônes WhiteSur sombres.",
+   "palette": "macos-dark",
+   "dark": true,
+   "titlebars": false,
+   "transparency": true,
+   "wallpaper": {
+    "style": "blobs"
+   },
+   "cursor": {
+    "item": "macos-win",
+    "file": "macOS-White-Windows.zip",
+    "prefer": "macOS-White-Regular"
+   },
+   "icons": {
+    "item": "linux-whitesur-icons",
+    "file": "01-WhiteSur.tar.xz",
+    "prefer": "WhiteSur-dark"
+   },
+   "taskbar": "macos",
+   "effects": "fluid",
+   "tools": [
+    "WinStep.Nexus",
+    "CharlesMilette.TranslucentTB"
+   ]
+  },
+  {
+   "id": "fluent-light",
+   "name": "Fluent Clair",
+   "desc": "Windows 11 sublimé : icônes Fluent, curseurs Bibata, vagues bleues.",
+   "palette": "win11-light",
+   "dark": false,
+   "titlebars": false,
+   "transparency": true,
+   "wallpaper": {
+    "style": "waves"
+   },
+   "cursor": {
+    "item": "bibata-win",
+    "file": "Bibata-Modern-Ice-Windows.zip",
+    "prefer": "Regular"
+   },
+   "icons": {
+    "item": "linux-fluent-icons",
+    "file": "01-Fluent.tar.xz",
+    "prefer": "Fluent"
+   },
+   "taskbar": "win11",
+   "effects": "default"
+  },
+  {
+   "id": "fluent-dark",
+   "name": "Fluent Sombre",
+   "desc": "Windows 11 en sombre, accent bleu glacier.",
+   "palette": "win11-dark",
+   "dark": true,
+   "titlebars": false,
+   "transparency": true,
+   "wallpaper": {
+    "style": "waves"
+   },
+   "cursor": {
+    "item": "bibata-win",
+    "file": "Bibata-Modern-Classic-Windows.zip",
+    "prefer": "Regular"
+   },
+   "icons": {
+    "item": "linux-fluent-icons",
+    "file": "01-Fluent.tar.xz",
+    "prefer": "Fluent-dark"
+   },
+   "taskbar": "win11",
+   "effects": "default"
+  },
+  {
+   "id": "nord",
+   "name": "Nord Arctique",
+   "desc": "Bleus polaires, montagnes, curseurs Nordzy convertis de Linux.",
+   "palette": "nord",
+   "dark": true,
+   "titlebars": true,
+   "transparency": true,
+   "wallpaper": {
+    "style": "mountains"
+   },
+   "cursor": {
+    "item": "linux-nordzy-cursors",
+    "file": "Nordzy-cursors.tar.gz",
+    "prefer": "Nordzy"
+   },
+   "icons": {
+    "item": "linux-papirus-icons",
+    "file": null,
+    "prefer": "Papirus-Dark"
+   },
+   "taskbar": "minimal",
+   "effects": "fluid"
+  },
+  {
+   "id": "dracula",
+   "name": "Dracula",
+   "desc": "Violet et rose sur nuit étoilée.",
+   "palette": "dracula",
+   "dark": true,
+   "titlebars": true,
+   "transparency": true,
+   "wallpaper": {
+    "style": "stars"
+   },
+   "cursor": {
+    "item": "catppuccin-cur-win",
+    "file": "catppuccin-mocha-mauve-cursors.zip",
+    "prefer": "mauve"
+   },
+   "icons": {
+    "item": "linux-papirus-icons",
+    "file": null,
+    "prefer": "Papirus-Dark"
+   },
+   "taskbar": "win11",
+   "effects": "fluid"
+  },
+  {
+   "id": "catppuccin",
+   "name": "Catppuccin Mocha",
+   "desc": "Pastel doux, curseurs Catppuccin, icônes Tela rondes.",
+   "palette": "catppuccin-mocha",
+   "dark": true,
+   "titlebars": true,
+   "transparency": true,
+   "wallpaper": {
+    "style": "blobs"
+   },
+   "cursor": {
+    "item": "catppuccin-cur-win",
+    "file": "catppuccin-mocha-mauve-cursors.zip",
+    "prefer": "mauve"
+   },
+   "icons": {
+    "item": "linux-tela-circle-icons",
+    "file": "01-Tela-circle.tar.xz",
+    "prefer": "Tela-circle-dark"
+   },
+   "taskbar": "minimal",
+   "effects": "fluid"
+  },
+  {
+   "id": "latte",
+   "name": "Catppuccin Latte",
+   "desc": "Pastel clair, lumineux et reposant.",
+   "palette": "catppuccin-latte",
+   "dark": false,
+   "titlebars": false,
+   "transparency": true,
+   "wallpaper": {
+    "style": "blobs"
+   },
+   "cursor": {
+    "item": "catppuccin-cur-win",
+    "file": "catppuccin-latte-light-cursors.zip",
+    "prefer": "latte"
+   },
+   "icons": {
+    "item": "linux-tela-circle-icons",
+    "file": "01-Tela-circle.tar.xz",
+    "prefer": "Tela-circle"
+   },
+   "taskbar": "minimal",
+   "effects": "fluid"
+  },
+  {
+   "id": "gruvbox",
+   "name": "Gruvbox Rétro",
+   "desc": "Tons chauds rétro, icônes Gruvbox Plus.",
+   "palette": "gruvbox",
+   "dark": true,
+   "titlebars": true,
+   "transparency": false,
+   "wallpaper": {
+    "style": "mountains"
+   },
+   "cursor": {
+    "item": "bibata-win",
+    "file": "Bibata-Modern-Amber-Windows.zip",
+    "prefer": "Regular"
+   },
+   "icons": {
+    "item": "linux-gruvbox-icons",
+    "file": null,
+    "prefer": "Gruvbox-Plus-Dark"
+   },
+   "taskbar": "classic",
+   "effects": "snappy"
+  },
+  {
+   "id": "tokyo",
+   "name": "Tokyo Night",
+   "desc": "Néons bleus et aurore.",
+   "palette": "tokyo-night",
+   "dark": true,
+   "titlebars": true,
+   "transparency": true,
+   "wallpaper": {
+    "style": "aurora"
+   },
+   "cursor": {
+    "item": "bibata-win",
+    "file": "Bibata-Modern-Classic-Windows.zip",
+    "prefer": "Regular"
+   },
+   "icons": {
+    "item": "linux-tela-circle-icons",
+    "file": "01-Tela-circle.tar.xz",
+    "prefer": "Tela-circle-dark"
+   },
+   "taskbar": "macos",
+   "effects": "fluid",
+   "tools": [
+    "CharlesMilette.TranslucentTB"
+   ]
+  },
+  {
+   "id": "sweet",
+   "name": "Sweet Neon",
+   "desc": "Dégradés néon, icônes Candy, curseurs Sweet convertis.",
+   "palette": "synthwave",
+   "dark": true,
+   "titlebars": true,
+   "transparency": true,
+   "wallpaper": {
+    "style": "lowpoly"
+   },
+   "cursor": {
+    "item": "linux-sweet-cursors",
+    "file": null,
+    "prefer": "Sweet"
+   },
+   "icons": {
+    "item": "linux-candy-icons",
+    "file": null,
+    "prefer": "candy"
+   },
+   "taskbar": "minimal",
+   "effects": "fluid",
+   "tools": [
+    "CharlesMilette.TranslucentTB"
+   ]
+  },
+  {
+   "id": "gen-synthwave",
+   "name": "Synthwave '84",
+   "desc": "Coucher de soleil néon des années 80.",
+   "palette": "synthwave",
+   "dark": true,
+   "titlebars": true,
+   "transparency": true,
+   "wallpaper": {
+    "style": "mountains"
+   },
+   "taskbar": "minimal",
+   "effects": "fluid"
+  },
+  {
+   "id": "gen-cyberpunk",
+   "name": "Cyberpunk 2077",
+   "desc": "Rose néon et cyan sur violet nuit.",
+   "palette": "cyberpunk",
+   "dark": true,
+   "titlebars": true,
+   "transparency": true,
+   "wallpaper": {
+    "style": "lowpoly"
+   },
+   "taskbar": "win11",
+   "effects": "snappy"
+  },
+  {
+   "id": "gen-gaming",
+   "name": "Gaming RGB",
+   "desc": "Vert néon, anneaux RGB, effets coupés pour les performances.",
+   "palette": "gaming",
+   "dark": true,
+   "titlebars": true,
+   "transparency": false,
+   "wallpaper": {
+    "style": "rings"
+   },
+   "taskbar": "minimal",
+   "effects": "performance"
+  },
+  {
+   "id": "gen-forest",
+   "name": "Forêt",
+   "desc": "Verts profonds et apaisants.",
+   "palette": "forest",
+   "dark": true,
+   "titlebars": true,
+   "transparency": true,
+   "wallpaper": {
+    "style": "mountains"
+   },
+   "taskbar": "win11",
+   "effects": "fluid"
+  },
+  {
+   "id": "gen-ocean",
+   "name": "Océan",
+   "desc": "Bleus profonds et vagues.",
+   "palette": "ocean",
+   "dark": true,
+   "titlebars": true,
+   "transparency": true,
+   "wallpaper": {
+    "style": "waves"
+   },
+   "taskbar": "win11",
+   "effects": "fluid"
+  },
+  {
+   "id": "gen-sakura",
+   "name": "Sakura",
+   "desc": "Rose cerisier tout en douceur.",
+   "palette": "sakura",
+   "dark": false,
+   "titlebars": false,
+   "transparency": true,
+   "wallpaper": {
+    "style": "blobs"
+   },
+   "taskbar": "macos",
+   "effects": "fluid"
+  },
+  {
+   "id": "gen-sunset",
+   "name": "Coucher de soleil",
+   "desc": "Orangés et violets chaleureux.",
+   "palette": "sunset",
+   "dark": true,
+   "titlebars": true,
+   "transparency": true,
+   "wallpaper": {
+    "style": "mountains"
+   },
+   "taskbar": "win11",
+   "effects": "fluid"
+  },
+  {
+   "id": "gen-minimal",
+   "name": "Minimal Noir",
+   "desc": "Noir et gris, aucune distraction.",
+   "palette": "monochrome-dark",
+   "dark": true,
+   "titlebars": false,
+   "transparency": false,
+   "wallpaper": {
+    "style": "gradient"
+   },
+   "taskbar": "minimal",
+   "effects": "snappy"
+  },
+  {
+   "id": "gen-mint",
+   "name": "Menthe fraîche",
+   "desc": "Clair et vert menthe.",
+   "palette": "mint",
+   "dark": false,
+   "titlebars": false,
+   "transparency": true,
+   "wallpaper": {
+    "style": "lowpoly"
+   },
+   "taskbar": "win11",
+   "effects": "default"
+  }
+ ]
+}

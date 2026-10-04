@@ -1,0 +1,37 @@
+name: BESTthemes Linux
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Dependencies
+        run: sudo apt-get update && sudo apt-get install -y python3-gi python3-gi-cairo python3-cairo python3-requests gir1.2-gtk-3.0
+
+      - name: Tests
+        run: python3 -m unittest discover -s tests -t . -v
+
+      - name: Debian package
+        run: packaging/build_deb.sh
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: BESTthemes-deb
+          path: dist/bestthemes_*_all.deb
+
+      - name: Attach to the release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/bestthemes_*_all.deb

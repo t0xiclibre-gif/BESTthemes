@@ -1,0 +1,118 @@
+{
+ "items": [
+  {
+   "id": "bibata-win",
+   "name": "Bibata",
+   "kind": "cursors",
+   "desc": "Les curseurs modernes les plus populaires, en version Windows native (3 tailles).",
+   "tags": [
+    "populaire",
+    "GitHub"
+   ],
+   "files": [
+    {
+     "name": "Bibata-Modern-Classic-Windows.zip",
+     "url": "https://github.com/ful1e5/Bibata_Cursor/releases/latest/download/Bibata-Modern-Classic-Windows.zip"
+    },
+    {
+     "name": "Bibata-Modern-Ice-Windows.zip",
+     "url": "https://github.com/ful1e5/Bibata_Cursor/releases/latest/download/Bibata-Modern-Ice-Windows.zip"
+    },
+    {
+     "name": "Bibata-Modern-Amber-Windows.zip",
+     "url": "https://github.com/ful1e5/Bibata_Cursor/releases/latest/download/Bibata-Modern-Amber-Windows.zip"
+    },
+    {
+     "name": "Bibata-Original-Classic-Windows.zip",
+     "url": "https://github.com/ful1e5/Bibata_Cursor/releases/latest/download/Bibata-Original-Classic-Windows.zip"
+    },
+    {
+     "name": "Bibata-Original-Ice-Windows.zip",
+     "url": "https://github.com/ful1e5/Bibata_Cursor/releases/latest/download/Bibata-Original-Ice-Windows.zip"
+    }
+   ],
+   "default": "Bibata-Modern-Classic-Windows.zip",
+   "preview_pling": "1197198"
+  },
+  {
+   "id": "macos-win",
+   "name": "macOS",
+   "kind": "cursors",
+   "desc": "Les curseurs du Mac, fidèles à l'original (version Windows native, 3 tailles).",
+   "tags": [
+    "macOS",
+    "GitHub"
+   ],
+   "files": [
+    {
+     "name": "macOS-Windows.zip",
+     "url": "https://github.com/ful1e5/apple_cursor/releases/latest/download/macOS-Windows.zip"
+    },
+    {
+     "name": "macOS-White-Windows.zip",
+     "url": "https://github.com/ful1e5/apple_cursor/releases/latest/download/macOS-White-Windows.zip"
+    }
+   ],
+   "default": "macOS-Windows.zip",
+   "preview_pling": "1355701"
+  },
+  {
+   "id": "googledot-win",
+   "name": "Google Dot",
+   "kind": "cursors",
+   "desc": "Curseurs Material de Google (version Windows native).",
+   "tags": [
+    "Material",
+    "GitHub"
+   ],
+   "files": [
+    {
+     "name": "GoogleDot-Blue-Windows.zip",
+     "url": "https://github.com/ful1e5/Google_Cursor/releases/latest/download/GoogleDot-Blue-Windows.zip"
+    },
+    {
+     "name": "GoogleDot-Black-Windows.zip",
+     "url": "https://github.com/ful1e5/Google_Cursor/releases/latest/download/GoogleDot-Black-Windows.zip"
+    },
+    {
+     "name": "GoogleDot-Red-Windows.zip",
+     "url": "https://github.com/ful1e5/Google_Cursor/releases/latest/download/GoogleDot-Red-Windows.zip"
+    },
+    {
+     "name": "GoogleDot-White-Windows.zip",
+     "url": "https://github.com/ful1e5/Google_Cursor/releases/latest/download/GoogleDot-White-Windows.zip"
+    }
+   ],
+   "default": "GoogleDot-Blue-Windows.zip"
+  },
+  {
+   "id": "catppuccin-cur-win",
+   "name": "Catppuccin",
+   "kind": "cursors",
+   "desc": "Curseurs pastel Catppuccin (convertis automatiquement pour Windows).",
+   "tags": [
+    "pastel",
+    "GitHub"
+   ],
+   "files": [
+    {
+     "name": "catppuccin-mocha-mauve-cursors.zip",
+     "url": "https://github.com/catppuccin/cursors/releases/latest/download/catppuccin-mocha-mauve-cursors.zip"
+    },
+    {
+     "name": "catppuccin-mocha-dark-cursors.zip",
+     "url": "https://github.com/catppuccin/cursors/releases/latest/download/catppuccin-mocha-dark-cursors.zip"
+    },
+    {
+     "name": "catppuccin-latte-light-cursors.zip",
+     "url": "https://github.com/catppuccin/cursors/releases/latest/download/catppuccin-latte-light-cursors.zip"
+    },
+    {
+     "name": "catppuccin-mocha-blue-cursors.zip",
+     "url": "https://github.com/catppuccin/cursors/releases/latest/download/catppuccin-mocha-blue-cursors.zip"
+    }
+   ],
+   "default": "catppuccin-mocha-mauve-cursors.zip"
+  }
+ ]
+}

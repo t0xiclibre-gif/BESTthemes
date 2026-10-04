@@ -1,0 +1,366 @@
+/* ${name} — thème généré par BESTthemes
+ * Base : Adwaita (intégré à GTK 3), recoloré et arrondi.
+ */
+@import url("resource:///org/gtk/libgtk/theme/Adwaita/gtk-contained${dark_suffix}.css");
+
+/* ---------- Couleurs nommées (utilisées par de nombreuses applis) ---------- */
+@define-color theme_bg_color ${bg};
+@define-color theme_fg_color ${fg};
+@define-color theme_base_color ${base};
+@define-color theme_text_color ${fg};
+@define-color theme_selected_bg_color ${accent};
+@define-color theme_selected_fg_color ${accent_fg};
+@define-color insensitive_bg_color ${bg};
+@define-color insensitive_fg_color ${fg_dim};
+@define-color insensitive_base_color ${base};
+@define-color theme_unfocused_bg_color ${bg};
+@define-color theme_unfocused_fg_color ${fg};
+@define-color theme_unfocused_base_color ${base};
+@define-color theme_unfocused_text_color ${fg};
+@define-color theme_unfocused_selected_bg_color ${accent};
+@define-color theme_unfocused_selected_fg_color ${accent_fg};
+@define-color borders ${border};
+@define-color unfocused_borders ${border};
+@define-color warning_color ${yellow};
+@define-color error_color ${red};
+@define-color success_color ${green};
+@define-color wm_title ${fg};
+@define-color wm_unfocused_title ${fg_dim};
+@define-color wm_highlight ${accent};
+@define-color wm_bg ${header};
+@define-color wm_unfocused_bg ${header};
+@define-color content_view_bg ${base};
+@define-color accent_color ${accent};
+@define-color accent_bg_color ${accent};
+@define-color accent_fg_color ${accent_fg};
+@define-color window_bg_color ${bg};
+@define-color window_fg_color ${fg};
+@define-color view_bg_color ${base};
+@define-color view_fg_color ${fg};
+@define-color headerbar_bg_color ${header};
+@define-color headerbar_fg_color ${fg};
+@define-color popover_bg_color ${surface};
+@define-color popover_fg_color ${fg};
+@define-color card_bg_color ${surface};
+@define-color card_fg_color ${fg};
+
+/* ---------- Fenêtres et vues ---------- */
+window, .background, dialog, messagedialog, assistant, .csd .background {
+  background-color: ${bg};
+  color: ${fg};
+}
+*:disabled, label:disabled { color: ${fg_dim}; }
+.dim-label, label.dim-label, .subtitle { color: ${fg_dim}; opacity: 1; }
+
+.view, iconview, textview text, treeview.view, list, listview, flowbox,
+.content-view, .sidebar, placessidebar list, stacksidebar list,
+scrolledwindow viewport.frame, .frame list {
+  background-color: ${base};
+  color: ${fg};
+}
+.view:hover, treeview.view:hover { background-color: ${base_hover}; }
+list row:hover, listbox row:hover { background-color: ${base_hover}; }
+
+.sidebar, placessidebar, placessidebar list, stacksidebar, .navigation-sidebar {
+  background-color: ${sidebar};
+  border-color: ${border};
+}
+placessidebar row { border-radius: ${radius_small}; margin: 1px 4px; }
+
+frame > border, .frame, scrolledwindow.frame, notebook, popover, list.frame {
+  border-color: ${border};
+}
+separator, .separator { background-color: ${border}; color: ${border}; }
+
+/* ---------- Sélection ---------- */
+*:selected, selection, .view:selected, .view:selected:focus, iconview:selected,
+treeview.view:selected, row:selected, list row:selected, textview text selection,
+entry selection, label selection, flowbox flowboxchild:selected,
+calendar:selected, .view text selection, spinbutton selection {
+  background-color: ${accent};
+  color: ${accent_fg};
+}
+row:selected label, row:selected image { color: ${accent_fg}; }
+*:link, *:link:hover, button:link, button:visited, link { color: ${link}; }
+
+/* ---------- Barres de titre (applis CSD) ---------- */
+headerbar, .titlebar:not(headerbar), .titlebar headerbar {
+  background-color: ${header};
+  background-image: none;
+  color: ${fg};
+  border-color: ${border};
+  box-shadow: none;
+}
+headerbar:backdrop, .titlebar:backdrop { background-color: ${header}; color: ${fg_dim}; }
+.titlebar, headerbar { border-radius: ${radius} ${radius} 0 0; }
+.maximized .titlebar, .maximized headerbar, .tiled .titlebar, .tiled headerbar { border-radius: 0; }
+headerbar .title { color: ${fg}; font-weight: bold; }
+headerbar .subtitle { color: ${fg_dim}; }
+decoration { border-radius: ${radius} ${radius} 0 0; }
+
+/* ---------- Boutons ---------- */
+button, button.flat:hover, headerbar button:hover, .linked > button,
+combobox > box > button, spinbutton button, notebook header tab button:hover,
+toolbar button:hover, filechooser .path-bar button {
+  background-color: ${button};
+  background-image: none;
+  border-color: ${button_border};
+  color: ${fg};
+  box-shadow: none;
+  text-shadow: none;
+  -gtk-icon-shadow: none;
+  border-radius: ${radius_small};
+}
+.linked > button { border-radius: 0; }
+.linked > button:first-child { border-top-left-radius: ${radius_small}; border-bottom-left-radius: ${radius_small}; }
+.linked > button:last-child { border-top-right-radius: ${radius_small}; border-bottom-right-radius: ${radius_small}; }
+.linked.vertical > button:first-child { border-radius: ${radius_small} ${radius_small} 0 0; }
+.linked.vertical > button:last-child { border-radius: 0 0 ${radius_small} ${radius_small}; }
+.linked > button:only-child { border-radius: ${radius_small}; }
+button:hover {
+  background-color: ${button_hover};
+  background-image: none;
+  border-color: ${button_border};
+}
+button:active, button:checked, button.flat:active, button.flat:checked,
+headerbar button:active, headerbar button:checked, toolbar button:checked {
+  background-color: ${button_active};
+  background-image: none;
+  color: ${fg};
+  box-shadow: none;
+}
+button:checked { background-color: ${accent}; color: ${accent_fg}; border-color: ${accent}; }
+button:disabled, button.flat:disabled {
+  background-color: ${button_disabled};
+  background-image: none;
+  color: ${fg_dim};
+  border-color: ${border};
+}
+button.flat, headerbar button, toolbar button, .path-bar button.flat {
+  background-color: transparent;
+  border-color: transparent;
+}
+button.suggested-action, button.default, .suggested-action button {
+  background-color: ${accent};
+  background-image: none;
+  border-color: ${accent_dark};
+  color: ${accent_fg};
+}
+button.suggested-action:hover { background-color: ${accent_hover}; }
+button.suggested-action:active { background-color: ${accent_dark}; }
+button.destructive-action {
+  background-color: ${red};
+  background-image: none;
+  border-color: ${red_dark};
+  color: ${red_fg};
+}
+button.destructive-action:hover { background-color: ${red_hover}; }
+button.titlebutton { background-color: transparent; border-color: transparent; color: ${fg}; }
+button.titlebutton:hover { background-color: ${button_hover}; }
+button.titlebutton.close:hover { background-color: ${red}; color: ${red_fg}; }
+
+/* ---------- Champs de saisie ---------- */
+entry, spinbutton:not(.vertical), spinbutton.vertical > text, textview.entry,
+combobox entry, searchentry {
+  background-color: ${base};
+  background-image: none;
+  color: ${fg};
+  border-color: ${button_border};
+  box-shadow: none;
+  border-radius: ${radius_small};
+  caret-color: ${accent};
+}
+entry:focus, spinbutton:focus-within, searchentry:focus {
+  border-color: ${accent};
+  box-shadow: inset 0 0 0 1px ${accent};
+}
+entry:disabled { background-color: ${bg}; color: ${fg_dim}; }
+entry progress { border-color: ${accent}; background-image: none; background-color: transparent; }
+entry image { color: ${fg_dim}; }
+
+/* ---------- Menus et popovers ---------- */
+menubar, .menubar { background-color: ${header}; color: ${fg}; box-shadow: none; }
+menubar > menuitem:hover, menubar > menuitem:checked { box-shadow: inset 0 -3px ${accent}; color: ${fg}; }
+menu, .menu, .context-menu, .dropdown-menu, window.popup {
+  background-color: ${surface};
+  color: ${fg};
+  border: 1px solid ${border};
+  padding: 4px 0;
+}
+.csd menu, .csd .menu, .csd .context-menu { border-radius: ${radius_small}; border: none; }
+menu menuitem, .menu menuitem, .context-menu menuitem { padding: 5px 10px; color: ${fg}; }
+menu menuitem:hover, .menu menuitem:hover, .context-menu menuitem:hover {
+  background-color: ${accent};
+  color: ${accent_fg};
+}
+menu menuitem:disabled { color: ${fg_dim}; }
+menu menuitem accelerator { color: ${fg_dim}; }
+menu menuitem:hover accelerator { color: ${accent_fg}; }
+menu separator { background-color: ${border}; margin: 4px 0; }
+menuitem check, menuitem radio { background-color: transparent; border-color: ${fg_dim}; }
+popover, popover.background {
+  background-color: ${surface};
+  color: ${fg};
+  border-color: ${border};
+  border-radius: ${radius};
+  box-shadow: 0 4px 12px ${shadow};
+}
+popover modelbutton:hover, modelbutton.flat:hover { background-color: ${accent}; color: ${accent_fg}; }
+tooltip, tooltip.background, .tooltip {
+  background-color: ${tooltip};
+  color: ${tooltip_fg};
+  border-radius: ${radius_small};
+  border: none;
+  text-shadow: none;
+}
+tooltip * { color: ${tooltip_fg}; }
+
+/* ---------- Onglets ---------- */
+notebook > header { background-color: ${header}; border-color: ${border}; }
+notebook > header > tabs > tab { color: ${fg_dim}; background-color: transparent; }
+notebook > header > tabs > tab:hover { color: ${fg}; background-color: ${base_hover}; }
+notebook > header > tabs > tab:checked { color: ${fg}; background-color: ${bg}; }
+notebook > header.top > tabs > tab:checked { box-shadow: inset 0 -3px ${accent}; }
+notebook > header.bottom > tabs > tab:checked { box-shadow: inset 0 3px ${accent}; }
+notebook > header.left > tabs > tab:checked { box-shadow: inset -3px 0 ${accent}; }
+notebook > header.right > tabs > tab:checked { box-shadow: inset 3px 0 ${accent}; }
+notebook > stack:not(:only-child) { background-color: ${base}; }
+
+/* ---------- Barres de défilement ---------- */
+scrollbar { background-color: transparent; border-color: transparent; }
+scrollbar slider {
+  background-color: ${scroll};
+  border-radius: 99px;
+  min-width: 6px;
+  min-height: 6px;
+  border: 2px solid transparent;
+}
+scrollbar slider:hover { background-color: ${scroll_hover}; }
+scrollbar slider:active { background-color: ${accent}; }
+scrollbar trough { background-color: transparent; }
+
+/* ---------- Interrupteurs, cases, boutons radio ---------- */
+switch {
+  background-color: ${button_active};
+  background-image: none;
+  border-color: ${button_border};
+  border-radius: 99px;
+  color: transparent;
+}
+switch:checked { background-color: ${accent}; border-color: ${accent}; }
+switch slider {
+  background-color: ${switch_knob};
+  background-image: none;
+  border-color: ${button_border};
+  border-radius: 99px;
+  box-shadow: none;
+}
+check, radio {
+  background-color: ${base};
+  background-image: none;
+  border: 1px solid ${button_border};
+  color: ${accent_fg};
+  box-shadow: none;
+}
+check { border-radius: ${radius_check}; }
+check:hover, radio:hover, checkbutton check:hover, radiobutton radio:hover { border-color: ${accent}; background-image: none; }
+check:checked, radio:checked, check:indeterminate, radio:indeterminate,
+checkbutton check:checked, radiobutton radio:checked, checkbutton check:indeterminate,
+radiobutton radio:indeterminate, .view check:checked, .view radio:checked,
+treeview.view check:checked, treeview.view radio:checked, menu menuitem check:checked,
+menu menuitem radio:checked, checkbutton check:checked:hover, radiobutton radio:checked:hover {
+  background-image: none;
+  background-color: ${accent};
+  border-color: ${accent};
+  color: ${accent_fg};
+}
+
+/* ---------- Curseurs, barres de progression ---------- */
+scale trough, progressbar trough, levelbar trough {
+  background-color: ${trough};
+  background-image: none;
+  border-color: ${trough};
+  border-radius: 99px;
+}
+scale highlight, progressbar progress, levelbar block.filled, levelbar block.high {
+  background-color: ${accent};
+  background-image: none;
+  border-color: ${accent};
+  border-radius: 99px;
+}
+levelbar block.low { background-color: ${yellow}; border-color: ${yellow}; }
+levelbar block.full { background-color: ${green}; border-color: ${green}; }
+scale slider {
+  background-color: ${switch_knob};
+  background-image: none;
+  border: 1px solid ${button_border};
+  box-shadow: 0 1px 2px ${shadow};
+}
+scale slider:hover { background-color: ${lighter_knob}; }
+
+/* ---------- Listes, en-têtes de colonnes ---------- */
+treeview.view header button, columnview header button {
+  background-color: ${base};
+  background-image: none;
+  border-color: ${border};
+  color: ${fg_dim};
+  border-radius: 0;
+}
+treeview.view header button:hover { color: ${fg}; background-color: ${base_hover}; }
+treeview.view { border-color: ${border}; }
+treeview.view:selected { background-color: ${accent}; color: ${accent_fg}; }
+treeview.view.expander { color: ${fg_dim}; }
+treeview.view.progressbar { background-color: ${accent}; background-image: none; }
+treeview.view.trough { background-color: ${trough}; }
+
+/* ---------- Barres d'outils, barres d'état, infobars ---------- */
+toolbar, .inline-toolbar, searchbar, .search-bar, actionbar, statusbar {
+  background-color: ${bg};
+  border-color: ${border};
+}
+actionbar > revealer > box { background-color: ${header}; border-color: ${border}; }
+infobar.info > revealer > box, infobar.question > revealer > box {
+  background-color: ${accent}; color: ${accent_fg};
+}
+infobar.warning > revealer > box { background-color: ${yellow}; color: ${yellow_fg}; }
+infobar.error > revealer > box { background-color: ${red}; color: ${red_fg}; }
+.app-notification, .app-notification.frame { background-color: ${surface}; color: ${fg}; }
+
+/* ---------- Calendrier, divers ---------- */
+calendar { background-color: ${base}; color: ${fg}; border-color: ${border}; }
+calendar.header { background-color: ${header}; border-color: ${border}; }
+calendar:indeterminate { color: ${fg_dim}; }
+calendar.highlight { color: ${accent}; }
+rubberband, .rubberband { background-color: ${accent_alpha}; border: 1px solid ${accent}; }
+.osd, .osd.background, overlay > .osd { background-color: ${osd}; color: ${osd_fg}; }
+
+/* ---------- XFCE : panneau, menu Whisker, bureau, Thunar ---------- */
+.xfce4-panel, .xfce4-panel.background, panel.xfce4-panel {
+  background-color: ${panel};
+  background-image: none;
+  color: ${panel_fg};
+}
+.xfce4-panel button, .xfce4-panel button.flat { color: ${panel_fg}; border-radius: ${radius_small}; }
+.xfce4-panel button:hover { background-color: ${panel_hover}; border-color: transparent; }
+.xfce4-panel button:checked, .xfce4-panel button:active {
+  background-color: ${panel_active};
+  color: ${panel_fg};
+  box-shadow: inset 0 -2px ${accent};
+}
+.xfce4-panel label, .xfce4-panel image { color: ${panel_fg}; }
+#whiskermenu-window, #whiskermenu-window .background { background-color: ${surface}; }
+#whiskermenu-window treeview.view, #whiskermenu-window .view { background-color: ${surface}; }
+#whiskermenu-window button:checked, #whiskermenu-window button:hover { background-color: ${accent}; color: ${accent_fg}; }
+#whiskermenu-window entry { border-radius: 99px; }
+XfdesktopIconView.view { background-color: transparent; color: #ffffff; text-shadow: 0 1px 2px rgba(0,0,0,0.8); }
+XfdesktopIconView.view:active, XfdesktopIconView.view:selected { background-color: ${accent_alpha}; color: #ffffff; border-radius: ${radius_small}; }
+XfdesktopIconView.label { color: #ffffff; text-shadow: 0 1px 2px rgba(0,0,0,0.8); }
+.thunar .sidebar, .thunar placessidebar { background-color: ${sidebar}; }
+.thunar toolbar { background-color: ${header}; }
+.xfce4-notifyd, #XfceNotifyWindow {
+  background-color: ${surface};
+  color: ${fg};
+  border-radius: ${radius};
+  border: 1px solid ${border};
+}
+#XfceNotifyWindow progressbar progress { background-color: ${accent}; }

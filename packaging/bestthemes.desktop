@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Name=BESTthemes
+GenericName=Gestionnaire de thèmes
+GenericName[en]=Theme manager
+Comment=Thèmes, icônes, curseurs, panneau, dock et fonds d'écran en un clic
+Comment[en]=Themes, icons, cursors, panel, dock and wallpapers in one click
+Exec=bestthemes
+Icon=bestthemes
+Terminal=false
+Categories=Settings;DesktopSettings;GTK;XFCE;X-XFCE-SettingsDialog;X-XFCE-PersonalSettings;
+Keywords=theme;thème;icônes;icons;curseur;cursor;panel;dock;plank;wallpaper;fond;apparence;appearance;
+StartupNotify=true
