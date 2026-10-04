@@ -100,8 +100,10 @@ def set_accent(h, titlebars=None, taskbar=None):
     palette, shades = accent_palette(h)
     wp.reg_set_keep(DESKTOP, "AutoColorization", 0, wp.DWORD)
     wp.reg_set(ACCENT, "AccentPalette", palette, wp.BINARY)
-    wp.reg_set(ACCENT, "AccentColorMenu", _signed(_hex_to_abgr(shades[4])), wp.DWORD)
-    wp.reg_set(ACCENT, "StartColorMenu", _signed(_hex_to_abgr(shades[5])), wp.DWORD)
+    # Comme Windows : AccentColorMenu = la couleur choisie (Windows recopie cette valeur dans
+    # DWM\AccentColor), StartColorMenu = la nuance suivante, plus foncée.
+    wp.reg_set(ACCENT, "AccentColorMenu", _signed(_hex_to_abgr(h)), wp.DWORD)
+    wp.reg_set(ACCENT, "StartColorMenu", _signed(_hex_to_abgr(shades[4])), wp.DWORD)
     wp.reg_set(DWM, "AccentColor", _signed(_hex_to_abgr(h)), wp.DWORD)
     wp.reg_set(DWM, "ColorizationColor", _signed(_hex_to_argb(h)), wp.DWORD)
     wp.reg_set(DWM, "ColorizationAfterglow", _signed(_hex_to_argb(h)), wp.DWORD)

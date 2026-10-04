@@ -157,13 +157,14 @@ class IconsTest(unittest.TestCase):
         from PIL import Image
         ico = Image.open(pack / "computer.ico")
         self.assertIn((256, 256), ico.info["sizes"])
-        icons.apply(meta)
         docs = wp.known_folder("Documents") / "desktop.ini"
+        original = docs.read_bytes() if docs.exists() else None  # Windows en crée souvent un
+        icons.apply(meta)
         self.assertIn("IconResource=", docs.read_text(encoding="utf-16"))
         self.assertEqual(icons.current(), "Demo")
         icons.apply(None)
         icons.restore_folders()
-        self.assertFalse(docs.exists())
+        self.assertEqual(docs.read_bytes() if docs.exists() else None, original)
 
 
 class LiveWallpaperTest(unittest.TestCase):

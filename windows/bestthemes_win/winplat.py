@@ -313,6 +313,7 @@ def run_hidden(cmd, wait=True, timeout=None):
         return subprocess.CompletedProcess(cmd, 0, b"", b"") if wait else None
     if wait:
         return subprocess.run(cmd, timeout=timeout, **kwargs)
+    kwargs.update(stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)  # personne ne lira la sortie
     return subprocess.Popen(cmd, **kwargs)
 
 
